@@ -1,8 +1,12 @@
 # Changelog for WebLinking
 
+## 3.0.0
+
+- Modernized for Xcode 26.
+
 ## 2.0.0
 
-Adds support for Swift 3.
+- Adds support for Swift 3.
 
 ## 1.1.0
 

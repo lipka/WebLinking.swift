@@ -4,11 +4,13 @@ Swift implementation of Web Linking ([RFC5988](https://tools.ietf.org/html/rfc59
 
 ## Installation
 
-[CocoaPods](https://cocoapods.org/) is the recommended installation method.
+### Swift Package Manager
 
-```ruby
-pod 'WebLinking'
-```
+Add WebLinking to your project using Xcode or by adding it to your Package.swift:
+
+dependencies: [
+    .package(url: "https://github.com/lipka/WebLinking.swift.git", from: "3.0.0")
+]
 
 ## Example
 
@@ -37,5 +39,4 @@ for link in response.links {
 
 ## License
 
-Web Linking is licensed under the MIT license. See [LICENSE](LICENSE) for more
-info.
+Web Linking is licensed under the MIT license. See [LICENSE](LICENSE) for more info.

@@ -40,8 +40,9 @@ class LinkTests: XCTestCase {
   // MARK: Hashable
 
   func testHashable() {
-    let otherLink = Link(uri: "/style.css", parameters: ["rel": "stylesheet", "type": "text/css"])
-    XCTAssertEqual(link.hashValue, otherLink.hashValue)
+    let oneLink = Link(uri: "/style.css", parameters: ["rel": "stylesheet", "type": "text/css"])
+    let otherLink = Link(uri: "/style.css", parameters: ["type": "text/css", "rel": "stylesheet"])
+    XCTAssertEqual(oneLink.hashValue, otherLink.hashValue)
   }
 }
 

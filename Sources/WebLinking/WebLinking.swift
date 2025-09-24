@@ -1,7 +1,7 @@
 import Foundation
 
 /// A structure representing a RFC 5988 link.
-public struct Link: Equatable, Hashable {
+public struct Link: Hashable {
   /// The URI for the link
   public let uri: String
 
@@ -12,11 +12,6 @@ public struct Link: Equatable, Hashable {
   public init(uri: String, parameters: [String: String]? = nil) {
     self.uri = uri
     self.parameters = parameters ?? [:]
-  }
-
-  /// Returns the hash value
-  public var hashValue: Int {
-    return uri.hashValue
   }
 
   /// Relation type of the Link.

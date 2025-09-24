@@ -8,13 +8,15 @@ Swift implementation of Web Linking ([RFC5988](https://tools.ietf.org/html/rfc59
 
 Add WebLinking to your project using Xcode or by adding it to your Package.swift:
 
+```swift
 dependencies: [
-    .package(url: "https://github.com/lipka/WebLinking.swift.git", from: "3.0.0")
+  .package(url: "https://github.com/lipka/WebLinking.swift.git", from: "3.0.0")
 ]
+```
 
 ## Example
 
-Given the following `Link` header on an `NSHTTPURLResponse`.
+Given the following `Link` header on an `HTTPURLResponse`.
 
 ```
 Link: <https://api.github.com/user/repos?page=3&per_page=100>; rel="next",

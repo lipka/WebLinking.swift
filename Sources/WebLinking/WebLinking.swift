@@ -30,11 +30,6 @@ public struct Link: Hashable {
   }
 }
 
-/// Returns whether two Link's are equivalent
-public func == (lhs: Link, rhs: Link) -> Bool {
-  return lhs.uri == rhs.uri && lhs.parameters == rhs.parameters
-}
-
 // MARK: HTML Element Conversion
 
 /// An extension to Link to provide conversion to a HTML element

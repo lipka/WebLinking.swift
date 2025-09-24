@@ -3,6 +3,8 @@
 ## 3.0.0
 
 - Modernized for Xcode 26.
+- Keep HTML and header parameter output stable by sorting keys.
+- Use synthesized `Hashable` and `Equatable` conformance.
 
 ## 2.0.0
 

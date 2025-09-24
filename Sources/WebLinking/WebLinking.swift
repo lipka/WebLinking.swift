@@ -46,9 +46,12 @@ public func == (lhs: Link, rhs: Link) -> Bool {
 extension Link {
   /// Encode the link into a HTML element
   public var html: String {
-    let components = parameters.map { key, value in
+    let parameterComponents = parameters
+      .sorted { lhs, rhs in lhs.key < rhs.key }
+      .map { key, value in
       "\(key)=\"\(value)\""
-      } + ["href=\"\(uri)\""]
+      }
+    let components = parameterComponents + ["href=\"\(uri)\""]
     let elements = components.joined(separator: " ")
     return "<link \(elements) />"
   }
@@ -60,9 +63,12 @@ extension Link {
 extension Link {
   /// Encode the link into a header
   public var header: String {
-    let components = ["<\(uri)>"] + parameters.map { key, value in
+    let parameterComponents = parameters
+      .sorted { lhs, rhs in lhs.key < rhs.key }
+      .map { key, value in
       "\(key)=\"\(value)\""
     }
+    let components = ["<\(uri)>"] + parameterComponents
     return components.joined(separator: "; ")
   }
 
